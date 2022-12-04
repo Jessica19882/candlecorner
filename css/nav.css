@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Shadows+Into+Light&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header a {
+    text-decoration: none;
+}
+nav{
+    display: inline-block;
+    padding: 5px;
+    margin: 3px 1px;
+    cursor: pointer;
+    border: none;
+}
+header {
+    margin: 10px;
+    padding: 20 30px;
+    background-color: rgb(0, 0, 0);
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brand {
+    font-weight: bolder;
+    font-size: 50px;
+    display: flexbox;
+    max-height: 100%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+#brand .logo {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    justify-content: space-around;
+}
+
+#brand a {
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    font-size: 20px;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul a {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+ul li {
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 50%;
+    font-weight: bolder;
+    background-color: rgb(230, 161, 233);
+    border:solid rgb(244, 14, 252);
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: rgb(225, 29, 231);
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: solid rgb(251, 145, 255);
+
+}
+
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(248, 37, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45 deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45 deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+}
+/* login */
+/* style the container */
+.container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #000000;
+    padding: 20px 0 30px 0;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* vertical line */
+.vl {
+    position: absolute;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%);
+    border: 2px solid rgb(0, 0, 0);
+    height: 175px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* text inside the vertical line */
+.inner {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    border: 1px solid rgb(241, 42, 231);
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+    display: none;
+}
+
+/* bottom container */
+.bottom-container {
+    text-align: center;
+    background-color: #666;
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+    .col {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* hide the vertical line */
+    .vl {
+        display: none;
+    }
+
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
